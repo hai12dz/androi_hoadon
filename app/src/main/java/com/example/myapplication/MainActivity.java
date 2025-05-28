@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
 
         loadHangHoaData();
 
-//        btnSapXep.setOnClickListener(v -> {
-//            hangHoaList.sort((g1, g2) -> g2.getNgayThang().compareToIgnoreCase(g1.getNgayThang()));
-//            adapter.notifyDataSetChanged();
-//        });
+        btnSapXep.setOnClickListener(v -> {
+            hangHoaList.sort((g1, g2) -> Integer.compare(g1.getSoTien(), g2.getSoTien()));
+            adapter.notifyDataSetChanged();
+        });
 //        btnThem.setOnClickListener(v -> {
 //            Intent intent = new Intent(MainActivity.this, ThemGiaoDichActivity.class);
 //            // Gửi số mã giao dịch tiếp theo sang màn thêm mới
